@@ -1,15 +1,27 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class Main {
 
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		String S = scanner.next();
-		int i = scanner.nextInt();
+		//입력
+		String S = br.readLine();
 		
-		String answer = S.substring(i-1, i);
+		int i = Integer.parseInt(br.readLine())-1; //배열이 0부터 시작되기 때문
 		
-		System.out.println(answer);
+		String answer = S.substring(i, i+1);
+		
+		//출력
+		bw.write(answer);
+		
+		br.close();
+		bw.flush();
+		bw.close();
 	}
 }
