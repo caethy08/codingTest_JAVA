@@ -23,11 +23,7 @@ public class Main {
 		//배열의 각 값의 자리 비교 후 연산
 		int[] answer = new int[6]; 
 		for (int i = 0; i < my.length; i++) {
-			if (origin[i] != my[i]) {
-				answer[i] = origin[i] - my[i];
-			}else {
-				answer[i] = 0;
-			}
+			answer[i] = origin[i] - my[i];
 			
 			bw.write(String.valueOf(answer[i] + " "));
 		}
